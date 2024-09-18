@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\COntrollers\PostController; //外部にあるPostControllerクラスを使えるようにします。
+
+Route::get('/posts',[PostController::class,'index']);
